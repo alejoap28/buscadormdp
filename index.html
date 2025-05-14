@@ -1,0 +1,13 @@
+<input type="text" id="busqueda" placeholder="Buscar en la intranet...">
+<button onclick="buscar()">Buscar</button>
+
+<script>
+  function buscar() {
+    const termino = document.getElementById("busqueda").value;
+    if (termino.trim() !== "") {
+      // Cambia esta URL según tu dominio
+      const url = `https://medipiel365.sharepoint.com/search/pages/results.aspx?k=${encodeURIComponent(termino)}`;
+      window.location.href = url;
+    }
+  }
+</script>
